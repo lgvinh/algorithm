@@ -1,3 +1,27 @@
+// This will print a zic zac-ed square matrix
+// with a given parameters n(n must be a integer)
+// example:
+// n = 5
+// => 
+//    1  2  9  10 25
+//    4  3  8  11 24
+//    5  6  7  12 24
+//    16 15 14 13 22
+//    17 18 19 20 21
+console.log(`
+-----------------------------------------------------
+|  -This will print a zic zac-ed square matrix      |
+|   with a given parameters n(n must be a integer)  |
+|   example:                                        |
+|   n = 5                                           |
+|   =>                                              |
+|     1  2  9  10 25                                |
+|     4  3  8  11 24                                |
+|     5  6  7  12 24                                |
+|     16 15 14 13 22                                |
+|     17 18 19 20 21                                |
+-----------------------------------------------------
+`);
 function printZicZacMatrix(n) {
   const a = [];
   for (let i = 0; i < n; i++) {
