@@ -7,13 +7,17 @@ function printZicZacMatrix(n) {
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < n; j++) {
       if (i !== j) {
-        const diagonalLineNumber = a[j][j];
-        if (i % 2) {
-          a[i][j] = diagonalLineNumber + 2 - i;
-        } else {
-          a[i][j] = diagonalLineNumber - j + i;
+        const greatestNumber = i > j ? i : j;
+        const diagonalLineNumber = a[greatestNumber][greatestNumber];
+        if (j === greatestNumber && i < greatestNumber) {
+          a[i][j] = j % 2
+            ? diagonalLineNumber - j + i
+            :diagonalLineNumber + j - i;
+        } else { // even
+          a[i][j] = i % 2
+            ? diagonalLineNumber - j + i
+            :diagonalLineNumber + j - i;
         }
-        // a[i][j] = "*";
       }
     }
   }
